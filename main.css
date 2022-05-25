@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to right, rgb(196, 232, 230), rgb(196, 237, 218));
+    height: 100vh;
+}
+
+.calculator-container {
+    display: grid;
+    width: 30em;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+}
+
+.calculator__output {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: rgb(50, 52, 60);
+    color: #f9f9f9;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.current-operand {
+    font-size: 3rem;
+}
+.calculator__buttons {
+    display: grid;
+    grid-template-rows: repeat(5, 80px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+    user-select: none;
+}
+
+.calculator__buttons > button {
+    outline-color: #cbcbcb;
+    outline-width: 2px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background-color .05s ease-in;
+    font-weight: 400;
+    color: rgb(50, 52, 60);
+}
+
+.number-btn {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.number-btn:hover,
+.number-btn:focus {
+    background-color: #fafafa;
+}
+
+.operand-btn:hover,
+.all-clear-btn:hover,
+.delete-btn:hover,
+.operand-btn:focus-within,
+.all-clear-btn:focus-within,
+.delete-btn:focus-within {
+    background-color: #d0d0d0;
+}
+
+.operand-btn,
+.all-clear-btn,
+.delete-btn {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.equals-btn {
+    background-color: hsl(38, 100%, 50%);
+}
+.equals-btn:hover {
+    background-color: hsl(36, 100%, 50%);
+}
+.span-two {
+    grid-column: span 2;
+}
+
+.calculator__buttons .selected-operator {
+    background-color: hsl(38, 100%, 50%);
+}
